@@ -1,3 +1,8 @@
 <h2>welcome</h2>
 <h2 [class]="suc" >channu BS</h2>
 <h2 [ngClass]="msg" >channu BS</h2>
+
+<button (click)= "onClick($event)">Greet</button>
+<button (click)= "greeting='welcome channu'">Greet</button>
+
+{{greeting}}

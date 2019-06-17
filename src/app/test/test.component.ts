@@ -15,7 +15,11 @@ export class TestComponent implements OnInit {
     'text-danger' : this.hasError,
     'text-special': true
   }
+  public greeting = '';
   ngOnInit() {
   }
-
+onClick(event) {
+  console.log(event);
+  this.greeting = 'hello you clicked button';
+}
 }
