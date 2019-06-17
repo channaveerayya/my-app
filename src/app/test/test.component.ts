@@ -17,6 +17,8 @@ export class TestComponent implements OnInit {
   }
   public greeting = '';
   public name = '';
+  // ngIf directive
+  public dispName = false;
   ngOnInit() {
   }
 onClick(event) {

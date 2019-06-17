@@ -27,3 +27,27 @@ two way binding -----------------------------
 <br>
 <input [(ngModel)]="name" type="text">
 {{name}}
+<br>
+<br>
+ngIf Directive-----------------------------------
+<br>
+<h2 *ngIf='dispName; else elseBlocks'> channu BS</h2>
+<br>
+  template reference variable to else part
+<ng-template #elseBlocks>
+    <h2>
+        name is hidden
+    </h2>
+</ng-template>
+<br>
+elseif syntax
+<br>
+<div *ngIf='dispName; then ifBlock;else elseBlock'></div>
+<ng-template #ifBlock>
+    <h2>channu</h2>
+</ng-template>
+<ng-template #elseBlock>
+    <h2>hidden</h2>
+</ng-template>
+
+
