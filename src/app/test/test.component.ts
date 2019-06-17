@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -23,7 +23,10 @@ export class TestComponent implements OnInit {
   public color = 'orange';
  // ng For
  public colors = ['red', 'green', 'blue'];
-
+// component interaction
+@Input() public parentData;
+  // or
+  // @input('parentData) public name
 
 
   ngOnInit() {
