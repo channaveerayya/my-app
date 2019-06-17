@@ -7,14 +7,23 @@
 
 {{greeting}}
 <br>
+<br>
+templateRefVar-----------------------------
+<br>
 <input type="text" #myId>
 <button (click)="templateRefVar(myId.value)">
     templateRefVar
 </button>
 <br>
 <br>
-<input type="text" #myId1>
+<input type="text" #myId1 >
 <button (click)="templateRefVar(myId1)">
     templateRefVar
 </button>
 
+<br>
+<br>
+two way binding -----------------------------
+<br>
+<input [(ngModel)]="name" type="text">
+{{name}}
