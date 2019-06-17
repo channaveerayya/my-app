@@ -19,6 +19,8 @@ export class TestComponent implements OnInit {
   public name = '';
   // ngIf directive
   public dispName = false;
+  //ng switch
+  public color = 'orange';
   ngOnInit() {
   }
 onClick(event) {

@@ -49,5 +49,15 @@ elseif syntax
 <ng-template #elseBlock>
     <h2>hidden</h2>
 </ng-template>
-
-
+<br>
+<br>
+ngSwitch directive------------
+<br>
+<div [ngSwitch]='color'>
+    <div *ngSwitchCase="'red'">you picked red color</div>
+    <div *ngSwitchCase="'green'">you picked green color</div>
+    <div *ngSwitchCase="'orange'">you picked orange color</div>
+    <div *ngSwitchDefault>pick again</div>
+</div>
+<br>
+<br>
