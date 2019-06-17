@@ -19,10 +19,16 @@ export class TestComponent implements OnInit {
   public name = '';
   // ngIf directive
   public dispName = false;
-  //ng switch
+  // ng switch
   public color = 'orange';
+ // ng For
+ public colors = ['red', 'green', 'blue'];
+
+
+
   ngOnInit() {
   }
+ 
 onClick(event) {
   console.log(event);
   this.greeting = 'hello you clicked button';
