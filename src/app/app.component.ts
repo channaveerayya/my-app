@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public parentName = 'channu';
+  public childMessage = '';
   title = 'channu ';
 }

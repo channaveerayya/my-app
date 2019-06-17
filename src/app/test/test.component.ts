@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-test',
@@ -23,15 +24,22 @@ export class TestComponent implements OnInit {
   public color = 'orange';
  // ng For
  public colors = ['red', 'green', 'blue'];
-// component interaction
+// component interaction PARENT TO CHILD
 @Input() public parentData;
   // or
   // @input('parentData) public name
 
+// CHILD TO PARENT
+@Output() public childEvent = new EventEmitter();
+
 
   ngOnInit() {
   }
- 
+
+  fireEvent() {
+    this.childEvent.emit('HEY Im CHILD DATA');
+  }
+
 onClick(event) {
   console.log(event);
   this.greeting = 'hello you clicked button';
