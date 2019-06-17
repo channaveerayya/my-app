@@ -6,3 +6,15 @@
 <button (click)= "greeting='welcome channu'">Greet</button>
 
 {{greeting}}
+<br>
+<input type="text" #myId>
+<button (click)="templateRefVar(myId.value)">
+    templateRefVar
+</button>
+<br>
+<br>
+<input type="text" #myId1>
+<button (click)="templateRefVar(myId1)">
+    templateRefVar
+</button>
+

@@ -22,4 +22,7 @@ onClick(event) {
   console.log(event);
   this.greeting = 'hello you clicked button';
 }
+templateRefVar(value) {
+  console.log(value)
+}
 }
