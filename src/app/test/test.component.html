@@ -95,3 +95,32 @@ EVEN element in the array <br>
 <h2>parent data used in child -> {{parentData}}</h2>
 <h2>child to parent</h2><br>
 <button (click)="fireEvent()">child data</button>
+<hr>
+<!--- pipes -->
+<h1>PIPES</h1>
+<hr>
+<h3>string -> {{color}}</h3>
+<h4>lowercase->{{color | lowercase}}</h4>
+<h4>uppercase->{{color | uppercase}}</h4>
+<h4>titlecase->{{color | titlecase}}</h4>
+<h4>slice->slice:3 (from index)== {{color | slice:3}}</h4>
+<h4>slice-> slice:1:4 (start index-> end index)== {{color | slice:1:4}}</h4>
+<h4>json -> {{msg | json}}</h4>
+
+<h4>number 5.568 -> {{5.568 | number:'1.2-3'}}</h4>
+<h4>number 5.568 -> {{5.568 | number:'3.4-5'}}</h4>
+<h4>number 5.568  -> {{5.568 | number:'3.1-2'}}</h4>
+<h4>percent %  of 0.25 ->{{0.25 | percent }}</h4>
+<h4>currency  -> {{0.25 | currency }}</h4>
+<h4>currency GBP (great briton pounds) -> {{0.25 | currency:'GBP' }}</h4>
+<h4>currency GBP without symbol (great briton pounds) -> {{0.25 | currency:'GBP':'code' }}</h4>
+<h4>DATE-> {{date}}</h4>
+<h4>DATE->short {{date | date:'short'}}</h4>
+<h4>DATE->only date and only time {{date | date:'shortDate'}}</h4>
+<h4>DATE->only date and only time {{date | date:'shortTime'}}</h4>
+<br>------medium date and long date---
+<h4>DATE-medium ==> {{date | date:'medium'}}</h4>
+<h4>DATE-long--> {{date | date:'long'}}</h4>
+
+
+

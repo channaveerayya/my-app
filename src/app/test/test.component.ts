@@ -9,6 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class TestComponent implements OnInit {
 
   constructor() { }
+  public date = new Date();
   public hasError = true;
   public suc = 'text-success';
   public msg = {
