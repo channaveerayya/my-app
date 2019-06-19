@@ -1,10 +1,7 @@
-<p>
-    employee-details works!
-  </p>
-
-  <table align ="center">
-    <tr><th>id</th><th>name</th><th>age</th></tr>
-    <tr *ngFor="let employee of emp ">
-      <td>{{employee.id}}</td> <td>{{employee.name}}</td> <td>{{employee.age}}</td>
-    </tr>
+<h2 class="display-4 strong">employee-details </h2>
+  <table class="table table-striped">
+    <thead> <tr><th>id</th><th>name</th><th>email</th></tr></thead>
+    <tbody><tr *ngFor="let employee of emp ">
+      <td>{{employee.id}}</td> <td>{{employee.name}}</td> <td>{{employee.email}}</td>
+    </tr></tbody>
   </table>

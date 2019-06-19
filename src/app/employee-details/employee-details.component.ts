@@ -7,11 +7,16 @@ import { EmployeeService } from '../employee.service';
   styleUrls: ['./employee-details.component.css']
 })
 export class EmployeeDetailsComponent implements OnInit {
-  public emp = [];
+  public emp ;
+  public error ;
   constructor(private EmpService: EmployeeService) { }
 
   ngOnInit() {
     // this.emp = this.EmpService.getEmployees();
+  
+      this.EmpService.getEmployees()
+       .subscribe(data => this.emp = data ,
+         error => this.error = error.message );
   }
 
 }
