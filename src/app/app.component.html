@@ -1,24 +1,34 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center ;">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+
  <!-- basics of angular 
   <app-test (childEvent)="childMessage=$event" [parentData]='parentName'></app-test>
  {{childMessage}}
  -->  
-
+<!--  
 <div class="container bg-light">
- <!--   SERVICES -->
+ 
  <div class="row">
-   <div class="col-6">
-     <app-employee-list></app-employee-list>
-    </div>
   <div class="col-6">
-     <app-employee-details></app-employee-details>
-  </div>
-  </div>
- 
- 
+    <app-employee-list></app-employee-list>
+   </div>
+ <div class="col-6">
+    <app-employee-details></app-employee-details>
  </div>
-</div> 
+ </div>
+
+</div>
+-->
+
+<nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+  <a class=" nav-link display-4 text-white" routerLink="/employee" > <strong>{{ title }}</strong></a>
+    <ul class="navbar-nav ml-auto ">
+        <li class="nav-item  ">
+           <a class="nav-link" routerLink="/employee" routerLinkActive="active">Employees</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/employeeDetails" routerLinkActive="active">EmployeeDetails</a>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet> 
+<!-- routing view here-->

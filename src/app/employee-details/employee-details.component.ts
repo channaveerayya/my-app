@@ -13,7 +13,6 @@ export class EmployeeDetailsComponent implements OnInit {
 
   ngOnInit() {
     // this.emp = this.EmpService.getEmployees();
-  
       this.EmpService.getEmployees()
        .subscribe(data => this.emp = data ,
          error => this.error = error.message );
