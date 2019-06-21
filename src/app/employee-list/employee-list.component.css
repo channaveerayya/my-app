@@ -1,3 +1,7 @@
 .pointer{
     cursor: pointer;
 }
+.selected{
+    background-color:grey;
+    color: beige;
+}

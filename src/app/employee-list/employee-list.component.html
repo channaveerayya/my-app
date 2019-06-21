@@ -4,7 +4,7 @@
 <h1 *ngIf='!emp'>Loading</h1>
 <div class="card" *ngFor="let employee of emp ">
  <ul class="list-group">
-   <li  (click)="onSelect(employee.id)" class="list-group-item pointer">
+   <li  (click)="onSelect(employee.id)" [class.selected]="isSelected(employee.id)" class="list-group-item pointer">
      <span class="badge badge-dark badge-pill">{{employee.id}} </span> {{employee.name}}
     </li>
  </ul> 

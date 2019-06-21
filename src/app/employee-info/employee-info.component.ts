@@ -32,7 +32,7 @@ goBack() {
   this.EmpService.getEmpInfo(this.userId)
   .subscribe(data => this.emp = data ,
     error => this.error = error.message );
-    
+
 }
 goNext() {
   this.userId = this.userId + 1 ;
@@ -42,5 +42,8 @@ goNext() {
   .subscribe(data => this.emp = data ,
     error => this.error = error.message );
 }
-
+goEmpList(){
+  let selectedId = this.userId ? this.userId : null ;
+  this.router.navigate(['employee',{id: selectedId}]);
+}
 }
