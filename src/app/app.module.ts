@@ -9,12 +9,14 @@ import { EmployeeService } from './employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule , routingComponents } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EmployeeInfoComponent } from './employee-info/employee-info.component';
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     routingComponents,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EmployeeInfoComponent
   ],
   imports: [
     FormsModule,

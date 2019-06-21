@@ -1,0 +1,33 @@
+<div class="container">
+    <div *ngIf="emp" class="card mt-2">
+        <h1 class="card-title bg-light text-center display-2">
+            <strong>{{emp.name}}</strong>
+        </h1>
+        
+        <div class="card-body text-center">
+            <h2>
+                <span class="badge badge-light display-2 "> UserName : {{emp.username}}</span>
+            </h2> 
+            <h2>
+                    <span class="badge badge-light display-2 "> Email : {{emp.email}}</span>
+            </h2> 
+            <h2>
+                    <span class="badge badge-light display-2"> 
+                        address : {{emp.address.street}} street 
+                         {{emp.address.city}} 
+                         {{emp.address.zipcode}}
+                        </span> 
+            </h2> 
+            <h2>
+                    <span class="badge badge-light display-2 "> Phone : {{emp.phone}}</span>   
+            </h2> 
+            <h2>
+                    <span class="badge badge-light display-2 "> Website : {{emp.website}}</span>   
+            </h2> 
+        </div> 
+            <div class="card-footer">
+                <a href="#" class="card-link float-left">Card link</a>
+                <a href="#" class="card-link float-right">Another link</a>
+            </div>
+    </div>
+</div>
