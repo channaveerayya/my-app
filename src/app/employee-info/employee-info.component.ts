@@ -27,7 +27,9 @@ export class EmployeeInfoComponent implements OnInit {
   }
 goBack() {
   this.userId = this.userId - 1 ;
-  this.router.navigate(['/employeeInfo', this.userId]);
+   this.router.navigate(['/employeeInfo', this.userId]);
+  // relative path
+  // this.router.navigate(['../',this.userId], {relativeTo : this.route});
 
   this.EmpService.getEmpInfo(this.userId)
   .subscribe(data => this.emp = data ,
@@ -36,7 +38,9 @@ goBack() {
 }
 goNext() {
   this.userId = this.userId + 1 ;
-  this.router.navigate(['/employeeInfo', this.userId]);
+   this.router.navigate(['/employeeInfo', this.userId]);
+  // relative path
+  // this.router.navigate(['../',this.userId], {relativeTo : this.route});
 
   this.EmpService.getEmpInfo(this.userId)
   .subscribe(data => this.emp = data ,
@@ -44,6 +48,8 @@ goNext() {
 }
 goEmpList(){
   let selectedId = this.userId ? this.userId : null ;
-  this.router.navigate(['employee',{id: selectedId}]);
+   this.router.navigate(['employee',{id: selectedId}]);
+  // relative path
+ // this.router.navigate(['../',{id: selectedId}], {relativeTo : this.route});
 }
 }
