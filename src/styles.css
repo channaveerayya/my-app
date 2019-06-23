@@ -3,7 +3,7 @@
     cursor: pointer;
 }
 .clr{
-    color:rgb(64, 86, 107) ;
+    color:rgb(21, 135, 201) ;
 }
 .clrTrue{
     color: yellowgreen;
@@ -13,4 +13,7 @@
     }
 .calClr{
     color: aqua;
+}
+.clrCmt{
+    color:rgb(240, 100, 45) ;
 }
