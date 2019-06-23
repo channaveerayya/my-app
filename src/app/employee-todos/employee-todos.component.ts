@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { EmployeeService } from '../employee.service';
 
@@ -11,7 +11,8 @@ export class EmployeeTodosComponent implements OnInit {
    public userId ;
    public TodoData ;
    public error ;
-
+   @Output() public childEvent:EventEmitter<any> = new EventEmitter();
+  
   constructor(private router: Router , private EmpService: EmployeeService , private route: ActivatedRoute ) { }
 
   ngOnInit() {
@@ -23,8 +24,9 @@ export class EmployeeTodosComponent implements OnInit {
     .subscribe(data => this.TodoData = data ,
       error => this.error = error.message );
   }
-  goEmpInfo(){
-    this.router.navigate(['employeeInfo',this.userId]);
+  goEmpInfo() {
+    this.childEvent.emit('true'); // its not a right way to solve
+    this.router.navigate(['employeeInfo', this.userId]);
   }
   }
 

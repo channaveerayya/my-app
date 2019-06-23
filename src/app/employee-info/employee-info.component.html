@@ -42,10 +42,15 @@
        </div>
        <button (click)="goEmpList()" type="button" class="btn btn-outline-secondary btn-block mt-1">Back</button>
        </div>
-    
     </div>
     <ng-template #todoBlock>
-        <router-outlet></router-outlet>
+        <!-- 
+            // its not a right way to solve
+            (deactivate)="todo=$event" this todo will store object data instead of true or false 
+        -->
+        <router-outlet (deactivate)="todo=$event" ></router-outlet>
+        
+       
     </ng-template>
     <ng-template #errorBlock>
         <div class="card mt-2"  >
