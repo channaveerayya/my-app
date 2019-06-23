@@ -1,10 +1,12 @@
 <div class="container">
     <div *ngIf="!error ; else errorBlock" class="card mt-2"  >
-       <div *ngIf="emp">
+       <div *ngIf="todo ;else todoBlock">
+        <div *ngIf="emp">
             <h2 class="card-title bg-light text-center display-3">
-                <a  class="float-left pointer">
-                    <i class="fa fa-tasks mt-2 ml-2" title = "Todo List" aria-hidden="true"></i>
+                <a (click)="todos(emp.id)"  class="float-left pointer">
+                    <i class="fa fa-tasks mt-2 ml-2 clr" title = "Todo List" aria-hidden="true"></i>
                 </a> 
+                
                 <strong>{{emp.name}} </strong>
                 <i class="fa fa-envelope float-right mt-2 mr-2" title="posts" aria-hidden="true"></i>
             </h2> 
@@ -38,7 +40,13 @@
                 </a>            
             </div>
        </div>
+       <button (click)="goEmpList()" type="button" class="btn btn-outline-secondary btn-block mt-1">Back</button>
+       </div>
+    
     </div>
+    <ng-template #todoBlock>
+        <router-outlet></router-outlet>
+    </ng-template>
     <ng-template #errorBlock>
         <div class="card mt-2"  >
             <h1 class="card-title bg-light text-danger text-center display-2">
@@ -52,5 +60,5 @@
             </div>    
         </div>
     </ng-template>
-    <button (click)="goEmpList()" type="button" class="btn btn-outline-secondary btn-block mt-1">Back</button>
+   
 </div>

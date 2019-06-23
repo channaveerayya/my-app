@@ -10,6 +10,7 @@ export class EmployeeInfoComponent implements OnInit {
   public emp ;
   public error ;
   public userId ;
+  public todo = true;
   constructor(private router: Router , private EmpService: EmployeeService , private route: ActivatedRoute ) { }
 
   ngOnInit() {
@@ -51,5 +52,10 @@ goEmpList(){
    this.router.navigate(['employee',{id: selectedId}]);
   // relative path
  // this.router.navigate(['../',{id: selectedId}], {relativeTo : this.route});
+}
+todos(id){
+  this.todo = !this.todo;
+  this.router.navigate(['todos',id],{relativeTo:this.route})
+   
 }
 }

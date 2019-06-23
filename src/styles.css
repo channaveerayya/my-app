@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.pointer{
+    cursor: pointer;
+}
+.clr{
+    color:rgb(64, 86, 107) ;
+}
+.clrTrue{
+    color: yellowgreen;
+    }
+.clrFalse{
+    color: red;
+    }
+.calClr{
+    color: aqua;
+}

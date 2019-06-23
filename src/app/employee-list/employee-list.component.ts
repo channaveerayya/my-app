@@ -23,6 +23,7 @@ export class EmployeeListComponent implements OnInit {
         this.selectedId = id;
       });
       }
+      
   onSelect(id) {
      this.router.navigate(['/employeeInfo', id]);
     // relative path

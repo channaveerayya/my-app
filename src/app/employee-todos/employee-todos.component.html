@@ -1,0 +1,16 @@
+<div class="card text-center">
+  <div class="card-title display-4 text-info">
+      <button (click)="goEmpInfo()" type="button" class="btn btn-outline-secondary float-left mt-3 ml-2 p-2">Back</button>    
+    <strong>Todo Lists</strong>
+  </div>
+  <div class="list-group">
+    <li  *ngFor="let todo of TodoData"class="list-group-item list-group-item-action ">
+     <h4>
+        <i class="fa fa-calendar calClr float-left "></i> {{ todo.title | uppercase }} 
+        
+        <i *ngIf="!todo.completed" class="fa fa-times-circle float-right clrFalse mr-auto" title="task not completed "></i>
+        <i *ngIf="todo.completed" class="fa fa-check-circle float-right clrTrue mr-auto " title="task not completed "></i>
+     </h4>
+    </li>
+  </div>
+</div>
