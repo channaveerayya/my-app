@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { EmployeeInfoComponent } from './employee-info/employee-info.component';
 import { EmployeeTodosComponent } from './employee-todos/employee-todos.component';
 import { EmployeePostsComponent } from './employee-posts/employee-posts.component';
+import { BootcampComponent } from './bootcamp/bootcamp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { EmployeePostsComponent } from './employee-posts/employee-posts.componen
     PageNotFoundComponent,
     EmployeeInfoComponent,
     EmployeeTodosComponent,
-    EmployeePostsComponent
+    EmployeePostsComponent,
+    BootcampComponent
   ],
   imports: [
     FormsModule,
