@@ -8,7 +8,7 @@
                 </a> 
                 
                 <strong>{{emp.name}} </strong>
-                <i class="fa fa-envelope float-right clrCmt mt-2 mr-2" title="posts" aria-hidden="true"></i>
+                <i (click)="posts(emp.id)"  class="fa fa-envelope float-right clrCmt mt-2 mr-2 pointer" title="posts" aria-hidden="true"></i>
             </h2> 
             <div class="card-body text-center">
                 <h2>
@@ -48,7 +48,7 @@
             // its not a right way to solve
             (deactivate)="todo=$event" this todo will store object data instead of true or false 
         -->
-        <router-outlet (deactivate)="todo=$event" ></router-outlet>
+        <router-outlet (deactivate)="todo=$event"></router-outlet>
         
        
     </ng-template>

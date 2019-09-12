@@ -53,10 +53,13 @@ goEmpList(){
   // relative path
  // this.router.navigate(['../',{id: selectedId}], {relativeTo : this.route});
 }
-todos(id){
+todos(id) {
   this.todo = !this.todo;
-  this.router.navigate(['todos',id],{relativeTo:this.route})
-   
+  this.router.navigate(['todos', id], {relativeTo: this.route});
+}
+posts(id) {
+  this.todo = !this.todo;
+  this.router.navigate(['posts', id], {relativeTo: this.route}); 
 }
 
 }

@@ -28,6 +28,7 @@ export class EmployeeTodosComponent implements OnInit {
     this.childEvent.emit('true'); // its not a right way to solve
     this.router.navigate(['employeeInfo', this.userId]);
   }
+
   }
 
 

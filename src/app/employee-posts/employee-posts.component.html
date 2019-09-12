@@ -1,0 +1,35 @@
+<div class="card ">
+  <div class="card-title display-4 text-center text-info">
+      <button (click)="goEmpInfo()" type="button" class="btn btn-outline-secondary float-left mt-3 ml-2 p-2">Back</button>    
+    <strong >Posts</strong>
+  </div>
+  
+  <div class="row">
+    <div class="col-12" *ngFor="let post of PostsData">
+      <div class="card mb-3 ">
+        <div class="card-title card-header text-left bg-secondary text-white  ">
+          <h2>{{post.title}}</h2>
+        </div>
+        <div class="card-body bg-light">
+          {{post.body}}
+          <div class=" text-info pointer">
+           <a (click)="comment(post.id)" class="text-right"> COMMENTS</a>
+           <div class="row">
+              <div class="col-3" *ngFor="let cmt of commentsData">
+                  <div class="card mb-3 " *ngIf="status">
+                      <div class="card-title card-header text-left bg-secondary text-white  ">
+                          <h2>{{cmt.name}}</h2>
+                        </div>
+                        <div class="card-body bg-light">
+                            {{cmt.body}}
+                  </div>
+
+              </div>
+
+           </div>
+          </div>
+        </div>
+      </div>
+     </div>
+  </div>
+</div>

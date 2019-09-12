@@ -11,6 +11,7 @@ import { AppRoutingModule , routingComponents } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EmployeeInfoComponent } from './employee-info/employee-info.component';
 import { EmployeeTodosComponent } from './employee-todos/employee-todos.component';
+import { EmployeePostsComponent } from './employee-posts/employee-posts.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { EmployeeTodosComponent } from './employee-todos/employee-todos.componen
     routingComponents,
     PageNotFoundComponent,
     EmployeeInfoComponent,
-    EmployeeTodosComponent
+    EmployeeTodosComponent,
+    EmployeePostsComponent
   ],
   imports: [
     FormsModule,
